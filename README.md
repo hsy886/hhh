@@ -1,5 +1,7 @@
 # 何思雨 — 3D Study Archive
 
+**在线访问：** https://hsy886.github.io/hhh/
+
 一个以 [giordanobetti.com](https://giordanobetti.com/) 的排版与浏览方式为参考的**学生 3D 练习档案**。这里没有把自己包装成视频创作者或商业影像作者：所有条目都是大二阶段的课程 / 自学练习。
 
 目前共 **8 个条目**：**3 个 Unreal Engine 练习、4 个 Blender 练习、1 个 PBR 练习**。
@@ -17,7 +19,11 @@
 
 ## 1. 立即预览
 
-本地预览服务已经在运行：
+公开地址：
+
+**https://hsy886.github.io/hhh/**
+
+本地预览服务：
 
 **http://127.0.0.1:4173/**
 
@@ -187,12 +193,14 @@ hesiyu-portfolio/
 
 ## 7. 发布
 
-这是一个纯静态站点，上传整个 `hesiyu-portfolio` 文件夹即可：
+当前已部署到 **GitHub Pages**：
 
-- **Netlify Drop**：打开 https://app.netlify.com/drop，把文件夹拖进去
-- **Vercel**：Framework 选 Other，Build Command 留空
-- **GitHub Pages**：将文件推到仓库根目录并开启 Pages
-- **自己的服务器**：确保 MP4 响应带 `Accept-Ranges: bytes`；Nginx / Apache 默认支持
+- 仓库：https://github.com/hsy886/hhh
+- 页面：https://hsy886.github.io/hhh/
+- Pages 源：`main` 分支 / 根目录
+- 以后推送到 `main` 会自动更新
+
+仓库根目录保留了 `.nojekyll`，GitHub Pages 不会用 Jekyll 处理这个站点。项目仍然是纯静态 HTML / CSS / JS，也可以随时迁移到 Netlify、Vercel 或自己的服务器。
 
 发布前记得替换邮箱、社交链接，并检查所有练习说明。
 
