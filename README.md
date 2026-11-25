@@ -6,9 +6,11 @@
 
 目前共 **8 个条目**：**3 个 Unreal Engine 练习、4 个 Blender 练习、1 个 PBR 练习**。
 
+首页顺序：**OVERGROWN → WALKTHROUGH → SHRINE TEST → ORBITAL → VERTICAL → CHLORINE → BLOOM STUDY → THE DEVICE**。杂草丛生的三个 UE 场景放在最前面。
+
 - 深色电影感视觉，Instrument Serif + Host Grotesk 字体组合
 - 全屏「选中练习」舞台，滚轮 / 滑动 / 方向键切换
-- 背景随练习切换为对应的**模糊循环影像**
+- 背景随练习切换为对应场景的**轻磨砂循环影像**（CSS blur 12px）
 - Studies 巨幅标题索引，悬停显示预览
 - 练习详情页、Notes、Focus、视频播放器
 - About 学生自述、米白色 Contact 覆盖页
@@ -39,9 +41,7 @@ python serve.py
 
 ### 页面预览
 
-![Home](preview/home-desktop.png)
-
-![Home — Overgrown / UE environment](preview/home-overgrown.png)
+![Home — Overgrown / UE environment](preview/home-desktop.png)
 
 ![Home — Walkthrough / UE test](preview/home-walkthrough.png)
 
@@ -91,16 +91,16 @@ socials: [
 
 | 页面标题 | 原始文件 | 工具 | 练习内容 |
 | --- | --- | --- | --- |
-| ORBITAL | `微信视频2026-11-24_125432_391.mp4` | Blender | 场景 / 缩略图循环 |
-| VERTICAL | `微信视频2026-11-24_125423_896.mp4` | Blender | 环境 / 相机练习 |
 | OVERGROWN | `11月24日 (2).mp4` | Unreal Engine | 环境 / 灯光练习 |
 | WALKTHROUGH | `11月24日 (3).mp4` | Unreal Engine | 跑图测试 / 角色穿行 |
 | SHRINE TEST | `0001-0120.mp4` | Unreal Engine | 神龛固定机位测试 |
+| ORBITAL | `微信视频2026-11-24_125432_391.mp4` | Blender | 场景 / 缩略图循环 |
+| VERTICAL | `微信视频2026-11-24_125423_896.mp4` | Blender | 环境 / 相机练习 |
 | CHLORINE | `何思雨色彩作业.docx0000-1050.mp4` | Blender | 灯光 / 色彩练习 |
 | BLOOM STUDY | `微信视频2026-11-24_125408_967.mp4` | Blender | 参考 / 过程记录 |
 | THE DEVICE | 两张微信图片（3D 装置） | — | PBR 建模练习 |
 
-原始文件没有移动或删除。每个视频条目另有 `assets/videos/backgrounds/*-bg.mp4`，是单独的低码率、预模糊循环，只用于首页背景；纯图片项目则使用模糊封面图。
+原始文件没有移动或删除。每个视频条目另有 `assets/videos/backgrounds/*-bg.mp4`：1280×720、约 0.5–2.2 MB 的背景循环。背景视频只做了轻微压缩，首页再用 `blur(12px)` 叠一层磨砂，而不是把重度模糊直接烘进视频。
 
 ### 清晰度与源文件限制
 
@@ -113,7 +113,7 @@ socials: [
 
 ### 加载体积
 
-七部主视频合计约 88 MB（单部 4–33 MB），但页面一次只加载当前条目；首页模糊背景每部只有 0.2–0.9 MB。如果之后需要手机流量更友好的版本，可以再生成 720p 轻量版做响应式切换。
+七部主视频合计约 88 MB（单部 4–33 MB），但页面一次只加载当前条目；首页背景每部 0.5–2.2 MB（1280×720）。如果之后需要手机流量更友好的版本，可以再生成 720p 轻量版主视频做响应式切换。
 
 ---
 
